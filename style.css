@@ -1,0 +1,114 @@
+/* Réinitialisation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Style général */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  h1, h2, h3 {
+    color: #343a40;
+  }
+  
+  .photo-container {
+    margin-bottom: 20px;
+  }
+  
+  .photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .photo:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Animations */
+  .card {
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  footer {
+    background-color: #343a40;
+  }
+  /* Animation de la barre de navigation */
+.navbar {
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar:hover {
+    background-color: #e2e6ea;
+  }
+  
+  /* Animation des liens de navigation */
+  .animated-link {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    color: #007bff; /* Couleur par défaut */
+    transition: color 0.3s ease;
+  }
+  
+  .animated-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #007bff;
+    bottom: 0;
+    left: -100%;
+    transition: left 0.3s ease;
+  }
+  
+  .animated-link:hover {
+    color: #0056b3; /* Couleur au survol */
+  }
+  
+  .animated-link:hover::after {
+    left: 0;
+  }
+/* Animation d'entrée du texte */
+@keyframes slideIn {
+    0% {
+      transform: translateY(30px); /* Commence en bas */
+      opacity: 0; /* Commence invisible */
+    }
+    50% {
+      opacity: 0.5; /* Légèrement visible */
+    }
+    100% {
+      transform: translateY(0); /* Position finale */
+      opacity: 1; /* Complètement visible */
+    }
+  }
+  
+  /* Animation de changement de couleur */
+  @keyframes colorChange {
+    0% {
+      color: #fff; /* Couleur initiale blanche */
+    }
+    50% {
+      color: #ffdd57; /* Changer de couleur à mi-chemin */
+    }
+    100% {
+      color: #fff; /* Retour à la couleur initiale */
+    }
+  }
+  
+  /* Appliquer les animations aux textes */
+  .animate-text {
+    animation: slideIn 1s ease forwards, colorChange 1.5s ease forwards; /* Deux animations combinées */
+  }
+  
